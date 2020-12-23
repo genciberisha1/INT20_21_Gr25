@@ -1,0 +1,78 @@
+.button1 {
+    background-color:crimson;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 1%;
+    margin-left: 529px;
+    margin-top: 120px;
+    opacity: 0.85;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+   
+  }
+  
+  .button1:hover {opacity: 1}
+  .button1:hover {box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);}
+
+  .button2 {
+    background-color:deepskyblue;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 1%;
+    opacity: 0.85;
+    transition: 0.3s;
+    display:inline-block;
+    text-decoration: none;
+    cursor: pointer;
+   
+  }
+  
+  .button2:hover {opacity: 1}
+  .button2:hover {box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);}
+
+  .button3 {
+    background-color:rgba(255, 145, 0, 0.836);
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 1%;
+    opacity: 0.85;
+    transition: 0.3s;
+    display:inline-block;
+    text-decoration: none;
+    cursor: pointer;
+   
+  }
+  
+  .button3:hover {opacity: 1}
+  .button3:hover {box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);}
+
+  
+  .button4 {
+    background-color:rgba(0, 175, 152, 0.925);
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 1%;
+    opacity: 0.85;
+    transition: 0.3s;
+    display:inline-block;
+    text-decoration: none;
+    cursor: pointer;
+   
+  }
+  
+  .button4:hover {opacity: 1}
+  .button4:hover {box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);}
