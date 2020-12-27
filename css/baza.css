@@ -66,3 +66,19 @@ body{
     cursor: pointer;
     background-color:#198881;
   }
+
+  .left-cats{
+    background-color: #768a50 ;
+    border: 3px solid;
+    border-color: black;
+    padding: 35px 55px;
+    text-align: center;
+    font-size: 16px;
+    opacity: 0.85;
+    transition: 0.3s;
+    text-decoration: none;
+    cursor: pointer;
+    margin-right: 0%;
+  }
+  .left-cats-btn:hover {opacity: 1}
+  .left-cats-btn:hover {box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);}
