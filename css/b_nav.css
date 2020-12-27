@@ -1,0 +1,130 @@
+nav,
+header,
+footer{
+
+    display: block;
+}
+
+body{
+    line-height:1;
+    margin: 0px;
+}
+
+nav{
+    width: 100%;
+    margin: 0;
+    padding:0;
+}
+footer
+{
+    position:absolute; bottom:0;
+    width: 100%;
+}
+footer.foot3
+    {
+       padding-left: 10%;
+        background-color: #116466;
+    }
+    footer.foot3 h1
+    {
+      text-shadow:  1px 1px 8px #2c353198;
+        color:#d9b08c;
+    }
+    footer.foot3 ul{
+        list-style:lower-greek; color: #ffd0a3;
+        
+        text-align: left;
+        padding-left: 0;
+    }
+    footer.foot3{
+        color: #d1e8e2;
+        font-size: 22px;
+        line-height: 1.5;
+    }
+.list-item{
+    display: flex;
+    margin-left: 62%;
+    
+
+   
+  }
+  .button1  {
+      background-color:crimson;
+      border: none;
+      color: white;
+      padding: 35px 55px;
+      text-align: center;
+      font-size: 16px;
+      opacity: 0.85;
+      transition: 0.3s;
+      text-decoration: none;
+      cursor: pointer;
+      margin-right: 1%;
+   
+  
+    }
+    .button1:hover {opacity: 1}
+    .button1:hover {box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);}
+  
+    .button2 {
+      background-color:deepskyblue;
+      border: none;
+      color: white;
+      padding: 35px 55px;
+      text-align: center;
+      font-size: 16px;
+      opacity: 0.85;
+      transition: 0.3s;
+      text-decoration: none;
+      cursor: pointer;
+      margin-right: 1%;
+     
+    }
+    .button2:hover {opacity: 1}
+    .button2:hover {box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);}
+  
+    .button3 {
+      background-color:rgba(255, 145, 0, 0.836);
+      border: none;
+      color: white;
+      padding: 35px 55px;
+      text-align: center;
+      font-size: 16px;
+      opacity: 0.85;
+      transition: 0.3s;
+      text-decoration: none;
+      cursor: pointer;
+      margin-right: 1%;
+     
+    }
+    .button3:hover {opacity: 1}
+    .button3:hover {box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);}
+  
+    
+    .button4 {
+      background-color:rgba(0, 175, 152, 0.925);
+      border: none;
+      color: white;
+      padding: 35px 55px;
+      text-align: center;
+      font-size: 16px;
+      opacity: 0.85;
+      transition: 0.3s;
+      text-decoration: none;
+      cursor: pointer;
+      margin-right: 1%;
+     
+    }
+    .button4:hover {opacity: 1}
+    .button4:hover {box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);}
+  
+    .FlexCon {
+      display: flex;
+      flex-direction: row;
+      background-color: #C4DBF6;
+      width: 100%;
+     
+    }
+
+    
+    
