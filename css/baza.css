@@ -26,7 +26,7 @@ body{
     flex-grow: 1;
     border: solid;
     background-color:#3E7482;
-    height: 100vh;
+    height: match-parent;
     width: 100px;
 
   }
@@ -35,8 +35,10 @@ body{
     display: flex;
     flex-grow: 5;
     border: solid;
+    /* align-items: center; */
+    justify-content: center;
     background-color:#05252F;
-    height: 100vh;
+    height: 100%;
     width: 100px;
 
   }
@@ -82,3 +84,30 @@ body{
   }
   .left-cats-btn:hover {opacity: 1}
   .left-cats-btn:hover {box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);}
+
+
+  .right-editor{
+    display: flex;
+    background-color: #154757;
+    /* position: absolute; */
+    flex-direction: column;
+    height: 864px;
+    left: 0px;
+    width: 816px;
+  }
+
+
+  .right-editor-row{
+    margin: 0px;
+    color:  whitesmoke;
+    font-family: 'Roboto Mono';
+    margin-left:  96px;
+    margin-right: 96px;
+    height: 19px;
+
+    padding: 0;
+  }
+  .right-editor-row:first-of-type{
+    margin-top: 96px;
+    /* height: 19px; */
+  }
