@@ -90,14 +90,30 @@ body{
     display: flex;
     background-color: #154757;
     /* position: absolute; */
-    flex-direction: column;
+    /* flex-direction: column; */
+    justify-content: center;
     height: 864px;
-    left: 0px;
+    /* left: 0px; */
     width: 816px;
   }
 
+  #right-editor-workspace{
+    display: flex;
+    flex-direction: column;
+    height: 768px;
+    width: 720px;
+    margin-top: 96px;
+    font-family: 'Roboto Mono';
+    color:  whitesmoke;
 
-  .right-editor-row{
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal
+
+  }
+
+
+  /* .right-editor-row{
     margin: 0px;
     color:  whitesmoke;
     font-family: 'Roboto Mono';
@@ -110,4 +126,4 @@ body{
   .right-editor-row:first-of-type{
     margin-top: 96px;
     /* height: 19px; */
-  }
+  } */
