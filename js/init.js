@@ -20,8 +20,8 @@
   let attribs = new Map(); //map to hold the tag attributes
   var SRCS = [ // an array of your  file's paths
               'https://fonts.googleapis.com/css?family=Roboto Mono',
-              'css/baza.css',
-              'js/game.js'];
+              'css/styles.css',
+              'js/snake.js'];
 
 
  // looping through the array and with a switch{} statement, we
