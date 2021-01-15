@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="css/baza.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
     <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
-    <script type="text/javascript" src="js/init.js"></script>
+    <script type="text/javascript" src="js/input.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <title>Symtific - Scientific text editor</title>
   </head>
@@ -24,36 +24,50 @@
         <button class="top-cats-buttons fa  fa-text-height fa-fw"  onclick="format('fontSize','5')" type="button" name="button"></button>
       </div>
       <div class="top-cats">
-        <button class="top-cats-buttons"style="background-image: url('../res/integral.svg');" onclick="input()" type="button" name="button"></button>
-        <button class="top-cats-buttons" type="button" name="button">I2</button>
-        <button class="top-cats-buttons" type="button" name="button">I3</button>
-        <button class="top-cats-buttons" type="button" name="button">I4</button>
-        <button class="top-cats-buttons" type="button" name="button">I5</button>
-        <button class="top-cats-buttons" type="button" name="button">I6</button>
-        <button class="top-cats-buttons" type="button" name="button">I7</button>
-        <button class="top-cats-buttons" type="button" name="button">I8</button>
+        <button class="top-cats-buttons"  onclick="input()" type="button" name="button">∫</button>
+        <button class="top-cats-buttons" type="button" name="button">∫</button>
+        <button class="top-cats-buttons" type="button" name="button">∫∫∫</button>
+        <button class="top-cats-buttons" type="button" name="button">∮</button>
+        <button class="top-cats-buttons" type="button" name="button">∲</button>
+        <button class="top-cats-buttons" type="button" name="button">∳</button>
+        <button class="top-cats-buttons" type="button" name="button">∯</button>
+        <button class="top-cats-buttons" type="button" name="button">∰</button>
       </div>
 
       <div class="top-cats">
-        <button class="top-cats-buttons" type="button" name="button">D1</button>
-        <button class="top-cats-buttons" type="button" name="button">D2</button>
-        <button class="top-cats-buttons" type="button" name="button">D3</button>
-        <button class="top-cats-buttons" type="button" name="button">D4</button>
-        <button class="top-cats-buttons" type="button" name="button">D5</button>
-        <button class="top-cats-buttons" type="button" name="button">D6</button>
-        <button class="top-cats-buttons" type="button" name="button">D7</button>
-        <button class="top-cats-buttons" type="button" name="button">D8</button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="res/images/Derivatives/D1.svg"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="res/images/Derivatives/D2.svg"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="res/images/Derivatives/D3.svg"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="res/images/Derivatives/D4.svg"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="res/images/Derivatives/PD1.svg"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="res/images/Derivatives/PD2.svg"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="res/images/Derivatives/OD1.svg" width="20px" height="35px"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="res/images/Derivatives/OD2.svg" width="25px" height="35px"></button>
       </div>
 
       <div class="top-cats">
-        <button class="top-cats-buttons" type="button" name="button">K1</button>
-        <button class="top-cats-buttons" type="button" name="button">K2</button>
-        <button class="top-cats-buttons" type="button" name="button">K3</button>
-        <button class="top-cats-buttons" type="button" name="button">K4</button>
-        <button class="top-cats-buttons" type="button" name="button">K5</button>
-        <button class="top-cats-buttons" type="button" name="button">K6</button>
-        <button class="top-cats-buttons" type="button" name="button">K7</button>
-        <button class="top-cats-buttons" type="button" name="button">K8</button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="res/images/Trigonometry/TRIG1.svg" width="40px" height="40px"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="res/images/Trigonometry/TRIG2.svg" width="40px" height="40px"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="res/images/Trigonometry/TRIG3.svg" width="40px" height="40px"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="res/images/Trigonometry/TRIG4.svg" width="40px" height="40px"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="res/images/Trigonometry/TRIG5.svg" width="45px" height="40px"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="res/images/Trigonometry/TRIG6.svg" width="45px" height="40px"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="res/images/Trigonometry/TRIG7.svg" width="45px" height="40px"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="res/images/Trigonometry/TRIG8.svg" width="45px" height="40px"></button>
+      </div>
+
+
+      <div class="top-cats">
+        <button class="top-cats-buttons" type="button" name="button"><img src="res/images/Essentials/ES1.svg" width="20px" height="35px"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="res/images/Essentials/ES2.svg" width="35px" height="35px"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="res/images/Essentials/ES3.svg" width="15px" height="35px"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="res/images/Essentials/ES4.svg" width="15px" height="35px"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="res/images/Essentials/ES5.svg" width="20px" height="35px"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="res/images/Essentials/ES6.svg" width="20px" height="35px"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="res/images/Essentials/ES7.svg" width="20px" height="35px"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="res/images/Essentials/ES8.svg" width="40px" height="45px"></button>
+        
+        
       </div>
 
     </div>
@@ -64,7 +78,7 @@
     </div>
     <div id="right">
       <div class="right-editor">
-        <div id="right-editor-workspace" contenteditable="true">
+        <div id="right-editor-workspace" contenteditable="true" >
         </div>
       </div>
     </div>
