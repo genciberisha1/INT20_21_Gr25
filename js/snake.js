@@ -1,136 +1,156 @@
-var sheet = document.getElementById("canvas"); //getting the canvas from the HTML
-var pen = sheet.getContext("2d"); //getting the 2d renderer
-var width = sheet.width, height = sheet.height;
-window.addEventListener("keydown", eventHandler, false);
 
-//food that appears randomly to be eaten
-class food{
-    constructor(){
-        this.xPos = Math.floor(Math.random()*(width/20))*20; //scaling the position (x- co-ordinate) of food 
-        this.yPos = Math.floor(Math.random()*(height/20))*20; //scaling the position (y- co-ordinate) of food 
-    }
+const board_border = 'white';
+const board_background = "#9bba5a";
+const snake_col = 'rgba(0,0,0,.75)';
+const snake_border = 'white';
 
-    show(){
-        pen.fillStyle = "#A2B3A3"
-        pen.strokeStyle = "#ffa07a"
-        pen.fillRect(this.xPos, this.yPos, 20, 20);
-        pen.strokeRect(this.xPos, this.yPos, 20, 20);
+
+let snake = [
+  {x: 320, y: 300},
+  {x: 300, y: 300},
+  {x: 280, y: 300},
+  {x: 260, y: 300},
+  {x: 240, y: 300}, 
+]
+
+
+var score = 0;
+let changingDirection = false;
+let food_x;
+let food_y;
+let dx = 20;
+let dy = 0; 
+
+const snakeboard = document.getElementById("snakeboard");
+const snakeboard_ctx = snakeboard.getContext("2d");
+main();
+
+genFood();
+document.addEventListener("keydown", changeDirection);
+
+function main() {
+
+    if (game_end()) {
+    alert(" You Lost! \n" + " Your High Score is: "+ score + "\n Press the OK key to restart the game!") || window.location.reload();}
+    
+    
+
+    changingDirection = false;
+    setTimeout(function onTick(){
+    clearCanvas();
+    drawFood();
+    moveSnake();
+    drawSnake();
+    main();
+},40)
+}
+
+
+function clearCanvas() {
+  snakeboard_ctx.fillStyle = board_background;
+  snakeboard_ctx.strokestyle = board_border;
+  snakeboard_ctx.fillRect(0, 0, snakeboard.width, snakeboard.height);
+  snakeboard_ctx.strokeRect(0, 0, snakeboard.width, snakeboard.height);
+  
+}
+
+function drawSnake() {
+  snake.forEach(drawSnakePart)
+}
+
+function drawFood()
+{
+    snakeboard_ctx.fillStyle = " #D00000 ";
+    snakeboard_ctx.strokestyle = " #A2AEBB";
+    snakeboard_ctx.fillRect(food_x, food_y, 10, 10);
+    snakeboard_ctx.strokeRect(food_x, food_y, 10, 10);
+}
+
+function drawSnakePart(snakePart) {
+  snakeboard_ctx.fillStyle = snake_col;
+  snakeboard_ctx.strokestyle = snake_border;
+  snakeboard_ctx.fillRect(snakePart.x, snakePart.y, 15, 18);
+  snakeboard_ctx.strokeRect(snakePart.x, snakePart.y, 15, 18);
+}
+function game_end()
+{
+    for (let i = 4; i < snake.length; i++) {
+        if (snake[i].x === snake[0].x && snake[i].y === snake[0].y) return true;
     }
     
+    const left_wall = snake[0].x < 0;
+    const right_wall = snake[0].x > snakeboard.width -20;
+    const top_wall = snake[0].y < 0;
+    const bottom_wall = snake[0].y > snakeboard.height -20;
+    return  left_wall || right_wall || top_wall || bottom_wall
 }
 
-//snake body
-class bodyPart{
-    constructor(x, y, part){
-        this.xPos = x;
-        this.yPos = y;
-        this.type = part;
-    }
 
-    show(){
-        pen.fillStyle = this.type == 0 ? "#225526" : "#399B40";
-        pen.strokeStyle = "#ffffff"
-        pen.fillRect(this.xPos, this.yPos, 20, 20);
-        pen.strokeRect(this.xPos, this.yPos, 20, 20);
-    }
+function randomFood(min, max){
+    return Math.round((Math.random() * (max-min) + min) / 20) * 20;
+}
+function genFood(){
+    food_x = randomFood (0, snakeboard.width - 20);
+    food_y = randomFood (0, snakeboard.height - 20);
+    snake.forEach(function has_snake_eaten_food(part){
+        const has_eaten = part.x == food_x && part.y == food_y;
+        if (has_eaten) genFood();
+    });
 }
 
-var mouse = new food();
-var body = [];
-var xSpeed = 0.5, ySpeed = 0;
-var animLoop = setInterval(draw, 100); // loops the draw function every 100ms
-body.push(new bodyPart(width/2, height/2, 0));
 
-//Length of snake grows on eating thatg mouse food
-function grow(){
-    var x = body[0].xPos;
-    var y = body[0].yPos;
-    body.unshift(new bodyPart(x + xSpeed*20, y + ySpeed*20, 0));
-}
-var score = 0;
-//what if snake eats the food
-function eats(){
-    if(body[0].xPos == mouse.xPos && body[0].yPos == mouse.yPos){
-        mouse = new food();
-        score++;
-        grow();
-        body[1].type = 1;
-    }
-}
-//what if head of snake strikes the edge
-function edges(){
-    if(body[0].xPos < 0)
-        body[0].xPos = width - 20;
-    else if(body[0].xPos > width -20)
-        body[0].xPos = 0;
-    else if(body[0].yPos < 0)
-        body[0].yPos = height - 20;
-    else if(body[0].yPos > height -20)
-        body[0].yPos = 0;
-}
+function changeDirection(event)
+{
+    const LEFT_KEY = 37;
+    const RIGHT_KEY = 39;
+    const UP_KEY = 38;
+    const DOWN_KEY = 40;
 
-function move(){
-    for(var i = body.length -1; i > 0; --i){
-        body[i].xPos = body[i -1].xPos;
-        body[i].yPos = body[i -1].yPos;
-    }
-    body[0].xPos += 20*xSpeed;
-    body[0].yPos += 20*ySpeed;
-}
+    if (changingDirection) return;
+    changingDirection = true;
+    const keyPress = event.keyCode;
+    const d_up = dy === -20;
+    const d_down = dy === 20;
+    const d_right = dx === 20;
+    const d_left = dx === -20;
 
-function die(){
-    for(var i = 0; i < body.length -1; ++i)
+    if (keyPress === LEFT_KEY && !d_right)
     {
-        if(body[body.length -1].xPos == body[i].xPos && body[body.length -1].yPos == body[i].yPos)
-        {
-            console.log("over");
-            document.getElementById("over").innerHTML = "You Lose!";
-            clearInterval(animLoop);
-            break;
-        }
+        dx = -20;
+        dy = 0;
+    }
+
+    if (keyPress === UP_KEY && !d_down)
+    {
+        dx = 0;
+        dy = -20;
+    }
+
+    if (keyPress === RIGHT_KEY && !d_left)
+    {
+        dx = 20;
+        dy = 0;
+    }
+
+    if (keyPress === DOWN_KEY && !d_up)
+    {
+        dx = 0;
+        dy = 20;
     }
 }
-
-// Controlling the Snake
-function eventHandler(event){
-    var key = event.keyCode;
-    console.log(event);
-    if((key == 65 || key == 37 || event == 'left') && xSpeed == 0){
-        xSpeed = -1;
-        ySpeed = 0;
+    
+    function moveSnake()
+    {
+        const head = {x: snake[0].x + dx, y: snake[0].y + dy};
+        snake.unshift(head);
+        const has_eaten_Food = snake[0].x === food_x && snake[0].y === food_y;
+      if (has_eaten_Food) {
+        score += 10;
+        document.getElementById('score').innerHTML = score ;
+        
+        genFood();
+      }else {
+        snake.pop();
+        
     }
-    else if((key == 68 || key == 39 || event == 'right') && xSpeed == 0){
-        xSpeed = 1;
-        ySpeed = 0;
-    }
-    else if((key == 83 || key == 40 || event == 'down') && ySpeed == 0){
-        xSpeed = 0;
-        ySpeed = 1;
-    }
-    else if((key == 87 || key == 38 || event == 'up') && ySpeed == 0){
-        xSpeed = 0;
-        ySpeed = -1;
-    }
-    else if(key == 32 && !pause){
-        clearInterval(animLoop);
-        pause = true;
-    }
-    else if(key == 32 && pause){
-        animLoop = setInterval(draw, 100);
-        pause = true;
-    }
-}
-
-function draw(){
-    pen.fillStyle = "#112222";
-    pen.fillRect(0, 0, width, height);
-
-    mouse.show();
-    for(var i = 0; i < body.length; ++i)
-        body[i].show();
-    move();
-    eats();
-    edges();
-    die();
-    document.getElementById("score").innerHTML = score;
 }
