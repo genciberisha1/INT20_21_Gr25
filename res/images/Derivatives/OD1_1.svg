@@ -1,0 +1,25 @@
+<svg width="734.5" height="1014" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <path d="m21,287q0,14 15,48t48,71t74,36q41,0 66,-23t26,-64q-2,-19 -3,-21q0,-3 -16,-46t-33,-97t-16,-86q0,-43 14,-60t42,-18q23,0 43,11t31,23t27,33q0,1 5,20t14,59t19,74q38,150 42,157q13,27 43,27q13,0 21,-7t11,-12t2,-9q0,-13 -49,-210t-56,-216q-28,-83 -97,-132t-138,-50q-45,0 -79,22t-34,66q0,22 7,37t19,22t20,10t17,3q44,0 44,-42q0,-20 -12,-35t-23,-20t-13,-5l-3,-1q2,-5 19,-12t34,-7l8,0q17,0 26,2q33,9 61,38t43,62t23,56t8,30l-6,-4q-6,-4 -19,-11t-26,-12q-20,-5 -39,-5q-46,0 -81,22t-46,71q-1,7 -1,31q0,57 35,149t35,117q0,1 0,2q0,9 0,12t-4,7t-11,4l-4,0q-23,0 -42,-19t-30,-41t-17,-42t-8,-22q-2,-2 -16,-2l-14,0q-6,6 -6,9z" id="MJX-10-TEX-I-79"/>
+  <path d="m79,43q-6,0 -27,6t-22,12q0,7 55,232t61,235q15,32 52,32q20,0 42,-15t22,-44q0,-5 -2,-15q-1,-7 -87,-223t-89,-218t-5,-2z" id="MJX-10-TEX-N-2032"/>
+ </defs>
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="602" width="802" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <g id="svg_1" transform="matrix(1,0,0,-1,0,0) " stroke-width="0" fill="currentColor" stroke="currentColor">
+   <g id="svg_2">
+    <g id="svg_3">
+     <g id="svg_4">
+      <use x="40.00006" y="-808.00116" id="svg_5" xlink:href="#MJX-10-TEX-I-79"/>
+     </g>
+     <g id="svg_6" transform="translate(490,413) scale(0.7070000171661377) ">
+      <use x="56.57717" y="-1142.85876" id="svg_7" xlink:href="#MJX-10-TEX-N-2032"/>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>
