@@ -21,7 +21,10 @@
   var SRCS = [ // an array of your  file's paths
               'https://fonts.googleapis.com/css?family=Roboto Mono',
               'css/baza.css',
-              'js/nav.js'];
+              'js/nav.js',
+              "js/Dark_Mode.js",
+              "js/input.js"
+            ];
 
 
  // looping through the array and with a switch{} statement, we
