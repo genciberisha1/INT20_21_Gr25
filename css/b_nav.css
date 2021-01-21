@@ -3,23 +3,23 @@
   margin: 0;
   padding: 0;
   user-select: none;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   font-family: 'Poppins', sans-serif;
 }
 .btn{
   position: absolute;
-  top: 15px;
-  left: 45px;
+  margin-top: 45px;
+  margin-left: inherit;
   height: 45px;
   width: 45px;
   text-align: center;
   background: #1b1b1b;
   border-radius: 3px;
   cursor: pointer;
-  transition: left 0.4s ease;
+  transition: left 0.6s ease;
 }
 .btn.click{
-  left: 260px;
+  margin-left: inherit;
 }
 .btn span{
   color: white;
@@ -30,15 +30,15 @@
   content: '\f00d';
 }
 .sidebar{
-  position: fixed;
-  width: 250px;
+  position: absolute;
+  width: inherit;
   height: 100%;
-  left: -250px;
   background: #1b1b1b;
   transition: left 0.4s ease;
 }
 .sidebar.show{
   left: 0px;
+  top: 30px;
 }
 .sidebar .text{
   color: white;

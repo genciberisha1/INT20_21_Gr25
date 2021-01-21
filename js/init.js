@@ -16,14 +16,15 @@
 */
 
 (function () {
-  var tags = '';  //var for tag that needs to be loaded
+  var tag = '';  //var for tag that needs to be loaded
   let attribs = new Map(); //map to hold the tag attributes
   var SRCS = [ // an array of your  file's paths
-              'https://fonts.googleapis.com/css?family=Roboto Mono',
               'css/baza.css',
               'js/nav.js',
               "js/Dark_Mode.js",
-              "js/input.js"
+              "js/input.js",
+              'https://fonts.googleapis.com/css?family=Roboto Mono',
+              
             ];
 
 

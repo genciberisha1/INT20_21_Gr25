@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    <script src="../js/init.js"></script>
+    <script src="../js/nav.js"></script>
+    <script src="../js/game.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="../css/baza.css">
+    <link rel="stylesheet" href="../css/b_nav.css">
+    <link rel="stylesheet" href="../css/snake_style.css">
+    <link rel="icon" href="https://image.flaticon.com/icons/png/512/747/747131.png" type="image/gif" sizes="16x16">
+    <title>Symtific - Scientific text editor</title>
+  </head>
+  <body  class="light-theme">
+    <label class="switch">
+      <i class="fas fa-eye"></i>
+      <div>
+        <input id='btn' onclick="switchTheme()" type="checkbox" />
+        <span  class="slider round"></span>
+
+      </div>
+    </label>
+    
+    <div id="top">
+      <div class="top-cats">
+        <button class="top-cats-buttons fa fa-font fa-fw" onclick="format('fontName','Arial')" type="button" name="Font button"></button>
+        <button class="top-cats-buttons fa fa-tint fa-fw" onclick="format('foreColor','000000')" type="button" name="Font button"></button>
+        <button class="top-cats-buttons fa fa-bold fa-fw" onclick="format('bold')" type="button" name="Bold button"></button>
+        <button class="top-cats-buttons fa fa-italic fa-fw"  onclick="format('italic')" type="button" name="Italic button"></button>
+        <button class="top-cats-buttons fa fa-underline fa-fw" onclick="format('underline')" type="button" name="Underline button"></button>
+        <button class="top-cats-buttons fa fa-align-left fa-fw"  onclick="format('justifyleft')" type="button" name="button"></button>
+        <button class="top-cats-buttons fa fa-align-center fa-fw"  onclick="format('justifycenter')" type="button" name="button"></button>
+        <button class="top-cats-buttons fa fa-align-right fa-fw"  onclick="format('justifyright')" type="button" name="button"></button>
+        <button class="top-cats-buttons fa fa-align-justify fa-fw"  onclick="format('justifyFull')" type="button" name="button"></button>
+        <button class="top-cats-buttons fa  fa-text-height fa-fw"  onclick="format('fontSize','5')" type="button" name="button"></button>
+      </div>
+    
+      <div class="top-cats">
+        <button class="top-cats-buttons"  onclick="input()" type="button" name="button"><img src="../res/images/Integrals/INT1.svg"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="../res/images/Integrals/INT2.svg "></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="../res/images/Integrals/INT3.svg"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="../res/images/Integrals/INT4.svg"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="../res/images/Integrals/INT5.svg"width="20px" height="40px"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="../res/images/Integrals/INT6.svg"width="20px" height="40px"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="../res/images/Integrals/INT7.svg"width="25px" height="40px"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="../res/images/Integrals/INT8.svg"width="40px" height="45px"></button>
+      </div>
+
+
+
+      <div class="top-cats">
+        <button class="top-cats-buttons" type="button" name="button"><img src="../res/images/Derivatives/D1.svg"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="../res/images/Derivatives/D2.svg"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="../res/images/Derivatives/D3.svg"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="../res/images/Derivatives/D4.svg"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="../res/images/Derivatives/PD1.svg"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="../res/images/Derivatives/PD2.svg"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="../res/images/Derivatives/OD1.svg" width="20px" height="35px"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="../res/images/Derivatives/OD2.svg" width="25px" height="35px"></button>
+      </div>
+
+      <div class="top-cats">
+        <button class="top-cats-buttons" type="button" name="button"><img src="../res/images/Trigonometry/TRIG1.svg" width="40px" height="40px"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="../res/images/Trigonometry/TRIG2.svg" width="40px" height="40px"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="../res/images/Trigonometry/TRIG3.svg" width="40px" height="40px"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="../res/images/Trigonometry/TRIG4.svg" width="40px" height="40px"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="../res/images/Trigonometry/TRIG5.svg" width="45px" height="40px"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="../res/images/Trigonometry/TRIG6.svg" width="45px" height="40px"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="../res/images/Trigonometry/TRIG7.svg" width="45px" height="40px"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="../res/images/Trigonometry/TRIG8.svg" width="45px" height="40px"></button>
+      </div>
+
+
+      <div class="top-cats">
+        <button class="top-cats-buttons" type="button" name="button"><img src="../res/images/Essentials/ES1.svg" width="20px" height="35px"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="../res/images/Essentials/ES2.svg" width="35px" height="35px"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="../res/images/Essentials/ES3.svg" width="15px" height="35px"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="../res/images/Essentials/ES4.svg" width="15px" height="35px"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="../res/images/Essentials/ES5.svg" width="20px" height="35px"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="../res/images/Essentials/ES6.svg" width="20px" height="35px"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="../res/images/Essentials/ES7.svg" width="20px" height="35px"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="../res/images/Essentials/ES8.svg" width="40px" height="45px"></button>
+      </div>
+
+      <div class="top-cats">
+        <button class="top-cats-buttons" type="button" name="button"><img src="../res/images/Physics/PH1.svg"width="25px" height="35px"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="../res/images/Physics/PH2.svg"width="30px" height="30px"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="../res/images/Physics/PH3.svg"width="15px" height="40px"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="../res/images/Physics/PH4.svg"width="15px" height="35px"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="../res/images/Physics/PH5.svg"width="15px" height="40px"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="../res/images/Physics/PH6.svg"width="25px" height="40px"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="../res/images/Physics/PH7.svg"width="20px" height="40px"></button>
+        <button class="top-cats-buttons" type="button" name="button"><img src="../res/images/Physics/PH8.svg"width="20px" height="35px"></button>
+        
+        
+      </div>
+    
+    </div>
+    <div id="left">
+      <!-- <button class="left-cats">Math</button>
+      <button class="left-cats">Physics</button>
+      <button class="left-cats">Electro</button> -->
+      <div class="btn">
+        <span class="fas fa-bars"></span>
+      </div>
+
+      <nav class="sidebar">
+      <div class="text">
+        <img class="icon" src="res/images/Symtific_logo.png" alt="Symtific_logo" style="margin-top:auto;">
+      </div>
+      <ul>
+        <li> <a href="/index.html" ><i class="fas fa-calculator" style="color: rgb(15, 221, 211);"></i> MATH </a></li>
+        <li><a href="/html/Physics.html"><i class="fas fa-flask" style="color: rgb(245, 0, 0);"></i> PHYSICS </a></li>
+        <li><a href="/html/Electro.html" ><i class="fas fa-power-off" style="color: rgb(19, 57, 179);"></i> ELECTRO </a></li>
+        <li> <a href="/html/snake.html" target="_blank"><i class="fas fa-gamepad" style="font-size: 19px; color: rgb(252, 227, 4);"></i> SNAKE GAME </a></li>
+        <li>
+          <a href="#" class="feat-btn">
+             <i class="far fa-save" style="color: rgb(127, 27, 209);"></i>     Save As
+              <span class="fas fa-caret-down first"> </span>
+          </a>
+          <ul class="feat-show">
+            <li><a href="#"><i class="fas fa-file-word" style="color: rgb(14, 88, 185);" ></i>     WORD</a></li>
+            <li><a href="#"><i class="far fa-file-pdf" style="color: rgb(235, 35, 35);" ></i>  PDF</a></li>
+          </ul>
+
+          <li> <a href="/html/about.html" target="_blank"><i class="far fa-question-circle" style="color: rgb(255, 255, 255);" ></i>  About</a></li>
+        </li>
+      </nav>
+    </ul>
+
+   
+</div>
+    
+    <div id="right">
+      <div class="right-editor">
+        <div id="right-editor-workspace" contenteditable="true" >
+        </div>
+      </div>
+    </div>
+    </body>
+
+
+</html>

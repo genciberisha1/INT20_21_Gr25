@@ -5,7 +5,7 @@ function switchTheme() {
 
  var currentTime = new Date().getHours();
   if (document.body) {
-      if (6<= currentTime   && currentTime <18) {
+      if (18<= currentTime   && currentTime <6) {
         document.getElementById('btn').click();
         }
       

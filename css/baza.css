@@ -53,7 +53,7 @@
 
 .switch {
   margin-left:inherit;
-  width: 65px;
+  width: 100px;
   display: flex;
   align-items: center;
   justify-content:space-evenly;
@@ -157,7 +157,7 @@ body > div{
   border-color: #363636 ;
   background-color:#ffffff;
   /* color: white; */
-  width: 200px;
+  width:200px;
   overflow: hidden;
 
 }
